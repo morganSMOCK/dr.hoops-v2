@@ -1,0 +1,34 @@
+.carre-contenu {
+    border-right: 1px solid #8e86b5;
+    border-bottom: 1px solid #8e86b5;
+    padding: 50px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 80px;
+  }
+  .carre-contenu img{
+    width: 90%;
+  }
+  .carre-contenu h2 {
+    margin-top: 30px;
+  }
+  
+  .carre-contenu ul {
+    margin-top: 30px;
+  }
+  
+  .carre-contenu + div {
+    text-align:left;
+  }
+  
+  .a-propos-main {
+    margin: auto;
+  }
+  
+  
+  @media screen and (max-width: 996px) {
+     .carre-contenu{
+      display:column;
+    }
+  }
+  

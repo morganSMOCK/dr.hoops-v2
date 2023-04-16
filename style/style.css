@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1em;
+  background-color: #962d21;
+}
+
+a {
+  color: #242424;
+  text-decoration: none;
+}
+
+em {
+  color: #d49625;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 3.5em;
+  color: #333333;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  color: #f9f8ff;
+}
+
+p,
+li {
+  font-size: 1.1em;
+  color: #f9f8ff;
+}
+
+header,
+footer {
+  background-color: white;
+  padding: 20px 50px;
+}
+
+.cta {
+  display: inline-block;
+  background: linear-gradient(#d49625, #333333);
+  color: white;
+  border-radius: 50px;
+  padding: 20px 30px;
+}
+.cto {
+  display: inline-block;
+  background: linear-gradient(#d49625, #333333);
+  color: white;
+  border-radius: 50px;
+  padding: 5px;
+}
+.cto:hover {
+  background: linear-gradient(#333333, #333333);
+  text-decoration: none;
+}
+
+
+a:hover {
+  text-decoration: underline;
+}
+
+.cta:hover {
+  background: linear-gradient(#333333, #333333);
+  text-decoration: none;
+}
+
+.lien-icone {
+  margin-left: 30px;
+}
+
+.lien-icone:hover {
+  opacity: 0.5;
+}
+
+section {
+  padding: 80px;
+}
+
+footer,
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  margin-left: 30px;
+}
+
+@media screen and (max-width: 996px) {
+  header nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header nav img {
+    margin-bottom: 20px;
+  }
+
+  header,
+  footer {
+    padding: 20px 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  section {
+    padding: 50px 20px 50px 20px;
+  }
+
+  nav a {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
