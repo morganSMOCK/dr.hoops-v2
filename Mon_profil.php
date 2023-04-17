@@ -1,17 +1,6 @@
 <?php
 session_start();
-
-if(isset($_GET['id'])AND $_GET['pseudo'] > 0)
-{
-    $getid = intval($_GET['pseudo']);
-    $requser = $bdd->prepare('SELECT * FROM membres WHERE pseudo =?');
-    $requser->execute(array($getid));
-    $utilisateur = $requser->fetch();
-
-?>
-
-
-
+ ?>
 
 <html>
 
@@ -45,12 +34,19 @@ if(isset($_GET['id'])AND $_GET['pseudo'] > 0)
                 <div class="form signup">
                     <header></header>
                   <form method="POST" action=""> 
-                  <h2>Profil de <?php echo $utilisateur['pseudo'];?></h2>
-                    <br /><br />
-                    Pseudo :<?php echo $utilisateur['pseudo'];?> 
-                    <br />
-                    Mail : <?php echo $utilisateur['mail'];?>
+                  <h2>Profil : <?php if (array_key_exists('nom', $_SESSION)){
+                        echo $_SESSION['nom'];}?>
+                        <?php if (array_key_exists('pseudo', $_SESSION)){
+                        echo $_SESSION['pseudo'];}?></h2> 
+                    <h2>Mail :<?php if (array_key_exists('mail', $_SESSION)){
+                        echo $_SESSION['mail'];}?>
+                        <?php if (array_key_exists('email', $_SESSION)){
+                        echo $_SESSION['email'];}?></h2>
                     <br />   
+                    
+                      <br />
+                    <a href="editionprofil.php">Editer mon profil</a>
+                    
               </section>
      <br>
      <br>         
@@ -69,12 +65,6 @@ if(isset($_GET['id'])AND $_GET['pseudo'] > 0)
     </footer>
 </body>
 </html>
-
-<?php
-}
-else
-{
-    
-}
+<?php   
 ?>
 

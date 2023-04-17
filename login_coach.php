@@ -43,7 +43,6 @@ session_start();
                     </div>
                     <input type="submit"  name="envoi" value="Connexion" href="index.php"/>
                     <br>
-                    <a href="index.php">Page principale</a>
                     <br>
                     <a href="Inscription_Coach.php">S'inscrire</a></p>
                     <br>
@@ -84,12 +83,17 @@ session_start();
                         
                     
                     header('index.php');
-                    echo 'Vous etes connecter vous pouvez retourner à la page principale.';
-                        
+                    echo '<p class="ac">Vous etes connecter vous pouvez retourner à la page principale.</p>';
+
+                
+                    ?>
+                    <p class="ac"><a href="index.php">Page principale</a></p>
+                    <?php
                     }
                     else {
                         echo '<p class="result">Mot de passe incorrect</p>';	
                         ?>
+                           
                             <p class="result"><a href="reset.php">Vous avez oublié votre mot de passe ?</a></p>
                         <?php											
                     }

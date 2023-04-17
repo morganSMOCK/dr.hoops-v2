@@ -36,18 +36,23 @@
                         echo'Bonjour '.$_SESSION['pseudo'];
                         echo '<p class="bouton"></p>';	
                             ?>
-                                <p class="bouton"> <a href="Mon_profil.php" class="cto">Voir le profil </a></p>
+                                <p class="bouton"> <a href="Mon_profil.php" class="cto">Voir mon profil </a></p>
                             <?php	          
                     }
                     ?></h1>
                      <h1><?php if (array_key_exists('nom', $_SESSION)){
-                        echo'Bonjour coach '.$_SESSION['nom'];  
-                    }
-                    else{
-    
-                    }?></h1>
+                        echo'Bonjour coach '.$_SESSION['nom'];
+                        echo '<p class="bouton"></p>';  
+                   
+                    
+                    ?>
+                        <p class="bouton"> <a href="Mon_profil.php" class="cto">Voir mon profil </a></p>
+                    <?php
+                 }
+                
+                    ?></h1>
                     <p>
-                       Bonjour nous avons de nombreux <em>exercices</em> à vous proposer n'hésitez pas à les mettres en <em>favoris</em>&#128521. 
+                     Nous avons de nombreux <em>exercices</em> à vous proposer n'hésitez pas à les mettres en <em>favoris</em>&#128521. 
                     </p>
                     <a href="Nos exercices.php" class="cta">Voir les exercices &#128170</a>
                 </div>

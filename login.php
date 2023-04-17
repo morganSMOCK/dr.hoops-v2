@@ -52,9 +52,9 @@ session_start();
 
         if(isset($_POST['envoi'])){
             // Si j'ai reçu le bouton de soumission, c'est que le formulaire a été envoyé.
-            $pseudo = trim($_POST['pseudo']); //Recupère la valeur du champ 'mail' et trim supprime les espaces au debut et à la fin
+            $pseudo = trim($_POST['pseudo']); //Recupère la valeur du champ 'mail' et trim supprime les espaces au debut et à la fin.
             $mdp = trim($_POST['mdp']);
-            $erreur = false; //On considere qu'il n'y a pas d'erreur pas defaut
+            $erreur = false; //On considere qu'il n'y a pas d'erreur pas defaut.
         
             if(empty($pseudo)){
                 echo '<p class="result" >Le champ pseudo est vide</p>';
@@ -85,7 +85,12 @@ session_start();
                         
                     
                     header('index.php');
-                        
+                    echo '<p class="ac">Vous etes connecter vous pouvez retourner à la page principale.</p>';
+
+                
+                    ?>
+                    <p class="ac"><a href="index.php">Page principale</a></p>
+                    <?php   
                     }
                     else {
                         echo '<p class="result">Mot de passe incorrect</p>';	
